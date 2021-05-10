@@ -10,9 +10,11 @@ python setup.py build_ext --inplace
 This will make the routine available as a standard python package.
 
 ## Section 1: The method
+<img src="https://render.githubusercontent.com/render/math?math=\ln L = -\frac{1}{2}\sum_i^N\frac{D_i - M_i}{\sigma_t} - 2\ln(\sigma_t)">
 
 ## Section 2: Usage
 ```python
 import avgrmsx
 avg,avg_err,rms, rms_err = avgrmsx(data,errors)
 ```
+<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
