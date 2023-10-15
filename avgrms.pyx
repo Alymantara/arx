@@ -61,7 +61,7 @@ def avgrmsx(double[:] dat, double[:] sig,
 
     # mean of positive error bars
     for i in range(ng):
-        e1 = sig[i]
+        e1 = e1 + sig[i]
     e1 = e1/ng
 
     #initial estimate
