@@ -5,7 +5,7 @@ from libc.math cimport exp,pow, abs,log, cos, ceil
 
 
 def avgrmsx(double[:] dat, double[:] sig,
-            int nloop=1000):
+            int nloop=1000,verbose=False):
     """
     avgrmsx(data, sig, nloop=100)
 
@@ -94,6 +94,12 @@ def avgrmsx(double[:] dat, double[:] sig,
     for loop in range(nloop):
         oldavg = avg
         oldrms = rms
+        # resetting the partial sums. Bug corrected on 26/10/2023
+        sum1 = 0.0
+        sum2 = 0.0
+        sumg = 0.0
+        sumo = 0.0
+        sum3 = 0.0
         #* scaled avg and rms
         a = avg / e1
         r = rms / e1
@@ -120,7 +126,7 @@ def avgrmsx(double[:] dat, double[:] sig,
         good = sumg
 
         if sumg <= 0.0: 
-            print('ERROR in AVGRMSX. NON-POSITIVE SUM(G)=', sumg)
+            if verbose: print('ERROR in AVGRMSX. NON-POSITIVE SUM(G)=', sumg)
             break
 
         #* revise avg and rms
@@ -144,7 +150,7 @@ def avgrmsx(double[:] dat, double[:] sig,
         if sum2 <= 0.0:
             rms = 0.0
             sigrms = -1
-            print("NO VARIANCE")
+            if verbose: print("NO VARIANCE")
             break
 
         #* converge when test < 1
@@ -168,7 +174,7 @@ def avgrmsx(double[:] dat, double[:] sig,
             #    if test < 1.: print('** CONVERGED ** :))')
             # Converged
             if test < 1.0: 
-                print('** CONVERGED ** :))', loop)
+                if verbose: print('** CONVERGED ** :))', loop)
                 break
 
         # quit if rms vanishes
