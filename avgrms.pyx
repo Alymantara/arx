@@ -19,7 +19,9 @@ def avgrmsx(double[:] dat, double[:] sig,
     sig  : float
         1-sigma uncertainties on the data array
     nloop : int, optional
-        Number of maximum iterations
+        Number of maximum iterations. Default=10000
+    verbose : logical, optional
+        Logical flag to print debugging statements. Default=False
 
     Returns
     ----------
@@ -179,6 +181,6 @@ def avgrmsx(double[:] dat, double[:] sig,
 
         # quit if rms vanishes
         if rms <= 0.0: break
-
+        if verbose: print('** Reached end of iteration loop ** :(', loop)
     return avg,sigavg,rms,sigrms
 
