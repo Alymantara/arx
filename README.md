@@ -22,7 +22,7 @@ where $`\sigma_i`$ is the uncertainty of each datapoint.
 
 The routine calculates this optimal average as well as an additional dispersion $`rms`$ not quantified by the uncertainty in the data. The routine maximises the following likelihood:
 ```math
-\ln L = -\frac{1}{2}\sum\limits_{i}^{N}\left[\frac{D_i - \langle D \rangle}{\sigma_t}\right] +2\ln(\sigma_t)
+-2\ln L = \sum\limits_{i}^{N}\left[\frac{\left(D_i - \langle D \rangle\right)^2}{\sigma_t^2}\right] +\sum\limits_{i}^{N}\ln(\sigma_t^2)
 ```
 where the total variance for the model $`\sigma_t`$:
 ```math
