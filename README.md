@@ -1,5 +1,5 @@
 # avgrmsx
-Maximum likelihood estimator of the mean and intrinsic rms of a time-series dataset (based on Keith Horne's avgrmsx).
+Maximum likelihood estimator of the mean and intrinsic rms of a time-series dataset (based on Keith Horne's avgrmsx). For a detail description of the method, see Keith Horne's lecture on the subject at http://star-www.st-and.ac.uk/~kdh1/ada/ada12.pdf
 
 
 ## Requirements & Installation
