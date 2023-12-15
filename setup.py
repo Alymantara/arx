@@ -16,7 +16,7 @@ from Cython.Build import cythonize
 import numpy
 
 setup(
-    ext_modules = cythonize("avgrms.pyx", annotate=True,
+    ext_modules = cythonize("arx.pyx", annotate=True,
         compiler_directives={'wraparound': False,
                             'nonecheck': False,
                             'cdivision': True,
