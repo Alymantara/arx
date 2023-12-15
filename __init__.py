@@ -10,9 +10,9 @@
 #from . import utils
 
 __modules__ = ['avgrms']
-from .avgrms.avgrms import avgrmsx
+from .arx.arx import arx
 
-__version__ = "0.2.0"
+__version__ = "1.0.0"
 
 # How to Compile
 # /Users/juan/miniconda3/bin/python setup.py build_ext --inplace
