@@ -1,4 +1,4 @@
-# avgrmsx
+# arx
 Maximum likelihood estimator of the mean and intrinsic rms of a time-series dataset (based on Keith Horne's avgrmsx). For a detail description of the method, see Keith Horne's lecture on the subject at http://star-www.st-and.ac.uk/~kdh1/ada/ada12.pdf
 
 
@@ -31,6 +31,8 @@ where the total variance for the model $`\sigma_t`$:
 
 ## Section 2: Usage
 ```python
-import avgrmsx
-avg,avg_err,rms, rms_err = avgrmsx(data,errors)
+import arx
+data = [-1,2,1.5]
+errors = [0.3,0.5,0.2]
+avg,avg_err,rms, rms_err = arx(data,errors)
 ```
