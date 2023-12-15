@@ -4,7 +4,7 @@ cimport numpy as np
 from libc.math cimport exp,pow, abs,log, cos, ceil
 
 
-def avgrmsx(double[:] dat, double[:] sig,
+def arx(double[:] dat, double[:] sig,
             int nloop=1000,verbose=False):
     """
     avgrmsx(data, sig, nloop=100)
