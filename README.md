@@ -3,9 +3,9 @@ Maximum likelihood estimator of the mean and intrinsic rms of a time-series data
 
 
 ## Requirements & Installation
-You can compile the cython code inside the folder by using the following command:
+To install arx, navigate to the folder and in the terminal by using the following command:
 ```
-python setup.py build_ext --inplace
+pip install -e .
 ```
 This will make the routine available as a standard python package.
 
@@ -34,5 +34,5 @@ where the total variance for the model $`\sigma_t`$:
 import arx
 data = [-1,2,1.5]
 errors = [0.3,0.5,0.2]
-avg,avg_err,rms, rms_err = arx(data,errors)
+avg,avg_err,rms, rms_err = arx.arx(data,errors)
 ```

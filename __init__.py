@@ -9,13 +9,8 @@
 #from .ptsampler import *
 #from . import utils
 
-__modules__ = ['avgrms']
-from .arx.arx import arx
+__modules__ = ['arx']
+from .arx import arx
 
-__version__ = "1.0.0"
+__version__ = "2.0.0"
 
-# How to Compile
-# /Users/juan/miniconda3/bin/python setup.py build_ext --inplace
-#
-
-# x = arange(100,1e5,2)
